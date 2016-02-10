@@ -1,3 +1,4 @@
+'use strict';
 var app = angular.module('featureFront');
 
 
@@ -7,7 +8,7 @@ app.controller('homeCtrl', function($scope, loginService, $state){
     loginService.login(admin).then(function(res, err){
       console.log('here');
       if(res.data.type === "Admin"){
-        console.log('TRUU');
+        $state.go('adminPage');
       }
     })
   }

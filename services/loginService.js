@@ -1,3 +1,4 @@
+'use strict';
 var app = angular.module('featureFront');
 
 app.service('loginService', function($http, $q, loginUrl){
